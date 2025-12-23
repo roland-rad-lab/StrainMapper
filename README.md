@@ -1,9 +1,9 @@
-## MoGeLi: Analysis of mouse strains and MHC haplotypes
+## StrainMapper: Analysis of mouse immunophenotype (strains and MHC haplotype)
 
 ### Overview
-MoGeLi is a tool to identify the strain(s) as well as the MHC haplotype(s) of mouse samples. 
-MoGeLi only requires mapped reads (i.e. bam file) to extract variants (SNPs) to identify the genetic background, based on sequencing data from: WES, WGS, lcWGS, full-length RNA (experimental).
-The raw genomic data (FASTQs) can be processing using our pipeline MoCaSeq but also any other NGS processing pipeline. RNA can be processed using STAR.
+StrainMapper is a tool to identify the strain(s) as well as the MHC haplotype(s) of mouse samples. 
+StrainMapper only requires mapped reads (i.e. bam file) to extract variants (SNPs) to identify the genetic background, based on sequencing data from: WES, WGS, lcWGS, full-length RNA (experimental).
+The raw genomic data (FASTQs) can be processing using our pipeline MoCaSeq but also any other NGS processing pipeline. RNA can be processed with for example STAR.
 
 ### Requirements
 The core code was written entirely in R (tested on version 4.3.2), with the following package dependencies: 
@@ -86,9 +86,9 @@ Note: Strains are associated to different MHC haplotypes, which can be found in 
 #### Advanced analysis (identification of transgenic alleles)
 ![advanced](example/Advanced.png)
 
-MoGeLi can also be used to identify transgenic loci. 
+StrainMapper can also be used to identify transgenic loci. 
 Example (a) shows the results for a pure C57BL/6J (black6) strain (after backcrossing), with the engineered constructs p48-Cre, LSL-Kras and LSL-Trp53 being preserved across generations (positive selection). The constructs were generated/introduced based on a 129 strain background.
 
 Example (b) shows a sample with a mixed background of 129 + black6 (C57BL/6J, C57BL/6NJ). Particularly striking is the transgenic loci Pdx1-Cre, which was generated on a FVB/NJ background. 
 
-Additional note: MoGeLi can also be used to roughly assess the backcrossing status for a given sample, based on the number or intensity of identified non-black6 strains (i.e. colorful bubbles). 
+Additional note: StrainMapper can also be used to roughly assess the backcrossing status for a given sample, based on the number or intensity of identified non-black6 strains (i.e. colorful bubbles). 
